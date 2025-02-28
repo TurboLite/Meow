@@ -3,84 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cộng đồng chính thức</title>
+    <title>Đặc điểm sản phẩm</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: url('https://i.imgur.com/d1aI9eW.png') no-repeat center center fixed;
-            background-size: cover;
+        * {
             margin: 0;
-            padding: 20px;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Thêm ảnh nền toàn bộ giao diện */
+        body {
+            background-image: url('https://i.imgur.com/NcgoIFv.png'); /* Ảnh nền */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Giữ cố định khi cuộn */
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
+            padding: 20px;
         }
+
         .container {
-            max-width: 400px;
-            background: rgba(255, 255, 255, 0.9); /* Nền trắng mờ */
+            width: 100%;
+            max-width: 500px;
+            background: white;
             border-radius: 12px;
-            padding: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            background-image: url('https://i.imgur.com/NcgoIFv.png'); /* Giữ nguyên ảnh nền bên trong viền */
+            background-size: cover;
+            background-position: center;
         }
-        .title {
-            color: #444;
+
+        /* Phần đặc điểm */
+        .features h2 {
             font-size: 18px;
             margin-bottom: 15px;
-            font-weight: bold;
+            color: pink;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
         }
-        .list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
         }
-        .item {
+
+        .feature-item {
             display: flex;
             align-items: center;
-            padding: 15px;
+            background: rgba(255, 238, 217, 0.9);
+            padding: 12px;
             border-radius: 8px;
-            transition: 0.3s ease-in-out;
-            text-decoration: none;
-            color: inherit;
-            font-size: 16px;
-            font-weight: bold;
+            font-size: 14px;
+            backdrop-filter: blur(5px);
         }
-        .item:hover {
-            background-color: #f4f4f4;
-            transform: scale(1.05);
-        }
-        .item:active {
-            transform: scale(0.98);
-        }
-        .item img {
-            width: 30px;
-            height: 30px;
-            margin-right: 12px;
-            transition: 0.3s;
-        }
-        .item:hover img {
-            transform: rotate(10deg);
+
+        .feature-item img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <div class="title">Tạo Bởi Turbo Lite</div>
-    <ul class="list">
-        <li>
-            <a class="item" href="https://youtube.com/@turboxlite" target="_blank">
-                <img src="https://cdn6.aptoide.com/imgs/2/e/f/2ef95eb650ca01e10a56d6933f1a4ebd_icon.png?w=128" alt="Discord">
-                <span>YouTube</span>
-            </a>
-        </li>
-        <li>
-            <a class="item" href="https://discord.gg/Bk73CjuRFy" target="_blank">
-                <img src="https://img.utdstc.com/icon/5ed/010/5ed01047ff16ea45ec92a448cd98f0a807eeca466da7c176a1b2b5f2ca8deb66:200" alt="YouTube">
-                <span>Discord</span>
-            </a>
-        </li>
-    </ul>
+    <!-- Phần đặc điểm -->
+    <div class="features">
+        <h2>Khám Phá Đặc Biệt</h2>
+        <div class="feature-grid">
+            <div class="feature-item">
+                <img src="https://i.imgur.com/llJqdgn.png" alt="Game">
+                <p>Thiết Bị Free</p>
+            </div>
+            <div class="feature-item">
+                <img src="https://i.imgur.com/5pOrDaO.png" alt="Battery">
+                <p>Vô Hạn Chơi</p>
+            </div>
+            <div class="feature-item">
+                <img src="https://i.imgur.com/WzGlqIX.png" alt="Lag">
+                <p>Không VPN</p>
+            </div>
+            <div class="feature-item">
+                <img src="https://i.imgur.com/mLcSJS8.png" alt="Smooth">
+                <p>30+ Thiết Bị</p>
+            </div>
+        </div>
+    </div>
 </div>
 
 </body>
