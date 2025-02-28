@@ -19,12 +19,14 @@
             background-position: center;
             background-attachment: fixed; /* Giữ cố định khi cuộn */
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             min-height: 40vh;
             padding: 20px;
         }
 
+        /* Container chung cho từng phần */
         .container {
             width: 100%;
             max-width: 500px;
@@ -36,14 +38,16 @@
             background-image: url('https://i.imgur.com/NcgoIFv.png'); /* Giữ nguyên ảnh nền bên trong viền */
             background-size: cover;
             background-position: center;
+            margin-bottom: 20px; /* Tạo khoảng cách giữa hai phần */
         }
 
-        /* Phần đặc điểm */
-        .features h2 {
+        /* Tiêu đề chung */
+        .features h2, .negative-features h2 {
             font-size: 18px;
             margin-bottom: 15px;
-            color: pink;
+            color: pink; /* Màu hồng cho cả hai phần */
             text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+            
         }
 
         .feature-grid {
@@ -71,10 +75,10 @@
 </head>
 <body>
 
+<!-- Phần đặc điểm -->
 <div class="container">
-    <!-- Phần đặc điểm -->
     <div class="features">
-        <h2>Khám Phá Đặc Biệt</h2>
+        <h2>Đặc Điểm</h2>
         <div class="feature-grid">
             <div class="feature-item">
                 <img src="https://i.imgur.com/llJqdgn.png" alt="Game">
@@ -91,6 +95,31 @@
             <div class="feature-item">
                 <img src="https://i.imgur.com/mLcSJS8.png" alt="Smooth">
                 <p>30+ Thiết Bị</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Phần ngược điểm -->
+<div class="container">
+    <div class="negative-features">
+        <h2>Cần Lưu Ý</h2>
+        <div class="feature-grid">
+            <div class="feature-item">
+                <img src="https://i.imgur.com/p4jM8ID.png" alt="Game">
+                <p>Không Thoát Khi Đang Chơi</p>
+            </div>
+            <div class="feature-item">
+                <img src="https://i.imgur.com/p4jM8ID.png" alt="Battery">
+                <p>Mở Cửa Sổ Nổi Để Treo</p>
+            </div>
+            <div class="feature-item">
+                <img src="https://i.imgur.com/p4jM8ID.png" alt="Lag">
+                <p>Hay Bị Lỗi Quá Tải Máy Chủ.!</p>
+            </div>
+            <div class="feature-item">
+                <img src="https://i.imgur.com/p4jM8ID.png" alt="Smooth">
+                <p>Không Lưu Data Dữ Liệu</p>
             </div>
         </div>
     </div>
